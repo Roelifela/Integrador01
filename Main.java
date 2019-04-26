@@ -19,7 +19,9 @@ public class Main {
         livrosLivraria.add(livro2);
         livrosLivraria.add(livro3);
 
-
+        livraria.cadastarLivro(livro1);
+        livraria.cadastarLivro(livro2);
+        livraria.cadastarLivro(livro3);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("DIGITE UMA DAS OPÇÕES");
@@ -29,11 +31,18 @@ public class Main {
 
         int opcao = scanner.nextInt();
 
-//        if (opcao == 1){
-//            System.out.println("DIGITE O CODIGO DO LIVRO........:");
-//            int codigo = scanner.nextInt();
-//            livraria.cadastarLivro();
-//        }
+        if (opcao == 1) {
+            System.out.println("DIGITE O CODIGO DO LIVRO........:");
+            int codigo = scanner.nextInt();
+            String titulo = scanner.next();
+            String autor = scanner.next();
+            String anoLancamento = scanner.next();
+            String codigoISBN = scanner.next();
+            int qtde = scanner.nextInt();
+            double preco = scanner.nextInt();
+
+            Livro novoLivro = new Livro(codigo, titulo, autor, anoLancamento, codigoISBN, qtde, preco);
+        }
 
         if (opcao == 2) {
             System.out.println("DIGITE O CODIGO DO LIVRO PARA CONSULTA....:");
@@ -46,5 +55,6 @@ public class Main {
             int codigo = scanner.nextInt();
             livraria.venderLivroPorCodigo(codigo);
         }
-   }
+    }
+
 }

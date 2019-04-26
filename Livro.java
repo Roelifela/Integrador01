@@ -80,9 +80,6 @@ public class Livro {
     }
 
 
-
-
-
     @Override
     public boolean equals(Object outroLivro) {
         if (!(outroLivro instanceof Livro)){
@@ -107,5 +104,6 @@ public class Livro {
                 " \n\tQuantidade Estoque: " + this.quantidadeEstoque +
                 " \n\tPreço: " + this.preco;
     }
-}
 
+
+}
